@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AE3E9021-F2B8-4B40-9113-5029487DEDAF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AFNetworking</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9488C0C6-0820-4724-AC17-64930BC79B8A</key>
+		<string>https://github.com/tomoya-k31/CodeRecipe</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/howto/AFNetworking/AFNetworking.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9488C0C6-0820-4724-AC17-64930BC79B8A</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tomoya-k31/CodeRecipe</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9488C0C6-0820-4724-AC17-64930BC79B8A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9488C0C6-0820-4724-AC17-64930BC79B8A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CodeRecipe</string>
+		</dict>
+	</array>
+</dict>
+</plist>
