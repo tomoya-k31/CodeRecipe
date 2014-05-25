@@ -2,7 +2,6 @@ iOS Recipe
 ==========
 
 ### Install Homebrew
----
 ```sh
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
@@ -12,7 +11,6 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ***
 ###  MacにRubyをインストールして複数バージョンの切り替え対応
 
----
 ###### rbenv, ruby-buildのインストール
 
 ```sh
