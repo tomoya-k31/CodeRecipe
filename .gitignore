@@ -43,3 +43,7 @@ DerivedData
 # Pods/
 Pods/
 Podfile.lock
+
+
+#### IntelliJ IDEA #########################################
+.idea/
