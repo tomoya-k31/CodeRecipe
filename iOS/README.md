@@ -26,7 +26,8 @@ brew install openssl
 ###### .zshrcに設定を追加
 
 ```sh
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 ```
 ###### rbenvで利用できるRubyのバージョンを確認
 
