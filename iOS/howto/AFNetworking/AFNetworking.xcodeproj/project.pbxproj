@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B4F182B193B75B600AEC9EB /* TMGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F182A193B75B600AEC9EB /* TMGlobal.m */; };
+		5B4F182E193B7C3E00AEC9EB /* TMHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F182D193B7C3E00AEC9EB /* TMHttpClient.m */; };
+		5B4F1832193B83AE00AEC9EB /* TMAbstractHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F1831193B83AE00AEC9EB /* TMAbstractHTTPManager.m */; };
 		E4DD8F7588CA4132B1C1C215 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D23CE53DBCC46DF99BCCB5D /* libPods.a */; };
 		E54886CB19324EDF008CA1ED /* TMLogUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E54886CA19324EDF008CA1ED /* TMLogUtils.m */; };
 		E54886CF19325934008CA1ED /* TMLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54886CE19325934008CA1ED /* TMLogFormatter.m */; };
@@ -38,6 +41,12 @@
 
 /* Begin PBXFileReference section */
 		1D23CE53DBCC46DF99BCCB5D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B4F1829193B75B600AEC9EB /* TMGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMGlobal.h; path = classes/Common/TMGlobal.h; sourceTree = "<group>"; };
+		5B4F182A193B75B600AEC9EB /* TMGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMGlobal.m; path = classes/Common/TMGlobal.m; sourceTree = "<group>"; };
+		5B4F182C193B7C3E00AEC9EB /* TMHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMHttpClient.h; path = classes/lib/TMHttpClient.h; sourceTree = "<group>"; };
+		5B4F182D193B7C3E00AEC9EB /* TMHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMHttpClient.m; path = classes/lib/TMHttpClient.m; sourceTree = "<group>"; };
+		5B4F1830193B83AE00AEC9EB /* TMAbstractHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMAbstractHTTPManager.h; path = classes/lib/TMAbstractHTTPManager.h; sourceTree = "<group>"; };
+		5B4F1831193B83AE00AEC9EB /* TMAbstractHTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMAbstractHTTPManager.m; path = classes/lib/TMAbstractHTTPManager.m; sourceTree = "<group>"; };
 		66258C017F66487BAE608A70 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E54886C919324EDF008CA1ED /* TMLogUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMLogUtils.h; path = classes/lib/TMLogUtils.h; sourceTree = "<group>"; };
 		E54886CA19324EDF008CA1ED /* TMLogUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMLogUtils.m; path = classes/lib/TMLogUtils.m; sourceTree = "<group>"; };
@@ -89,9 +98,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B4F1827193B737000AEC9EB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5B4F1829193B75B600AEC9EB /* TMGlobal.h */,
+				5B4F182A193B75B600AEC9EB /* TMGlobal.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		5B4F1828193B737B00AEC9EB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E5D4A5DC19322CC300CF0398 /* TMViewController.h */,
+				E5D4A5DD19322CC300CF0398 /* TMViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		5B4F182F193B7C4900AEC9EB /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				5B4F182C193B7C3E00AEC9EB /* TMHttpClient.h */,
+				5B4F182D193B7C3E00AEC9EB /* TMHttpClient.m */,
+				5B4F1830193B83AE00AEC9EB /* TMAbstractHTTPManager.h */,
+				5B4F1831193B83AE00AEC9EB /* TMAbstractHTTPManager.m */,
+			);
+			name = Http;
+			sourceTree = "<group>";
+		};
+		5B4F1833193B9BAA00AEC9EB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		E54886C719324EA9008CA1ED /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				5B4F1833193B9BAA00AEC9EB /* Extension */,
+				5B4F182F193B7C4900AEC9EB /* Http */,
 				E54886C819324EB5008CA1ED /* Log */,
 			);
 			name = lib;
@@ -143,11 +190,11 @@
 		E5D4A5CD19322CC300CF0398 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				5B4F1828193B737B00AEC9EB /* UI */,
+				5B4F1827193B737000AEC9EB /* Common */,
 				E5D4A5D619322CC300CF0398 /* TMAppDelegate.h */,
 				E5D4A5D719322CC300CF0398 /* TMAppDelegate.m */,
 				E5D4A5D919322CC300CF0398 /* Main.storyboard */,
-				E5D4A5DC19322CC300CF0398 /* TMViewController.h */,
-				E5D4A5DD19322CC300CF0398 /* TMViewController.m */,
 				E5D4A5DF19322CC300CF0398 /* Images.xcassets */,
 				E54886C719324EA9008CA1ED /* lib */,
 				E5D4A5CE19322CC300CF0398 /* Supporting Files */,
@@ -317,9 +364,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4F182E193B7C3E00AEC9EB /* TMHttpClient.m in Sources */,
 				E5D4A5DE19322CC300CF0398 /* TMViewController.m in Sources */,
+				5B4F1832193B83AE00AEC9EB /* TMAbstractHTTPManager.m in Sources */,
 				E54886CF19325934008CA1ED /* TMLogFormatter.m in Sources */,
 				E5D4A5D419322CC300CF0398 /* main.m in Sources */,
+				5B4F182B193B75B600AEC9EB /* TMGlobal.m in Sources */,
 				E5D4A5D819322CC300CF0398 /* TMAppDelegate.m in Sources */,
 				E54886CB19324EDF008CA1ED /* TMLogUtils.m in Sources */,
 			);
