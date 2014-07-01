@@ -1,6 +1,7 @@
 package me.tomoya.asyncsqlite.ui;
 
 import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -35,6 +36,9 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
+
+        // パッケージマネージャーの作成
+        final PackageManager packageManager = getActivity().getPackageManager();
         // Async Button
         asyncButton = (Button) rootView.findViewById(R.id.async_button);
         asyncButton.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +46,7 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 Log.v("test", "--- Async Button Click in ---");
 
-                AsyncDBManager.insert();
+                AsyncDBManager.insert(packageManager);
             }
         });
 

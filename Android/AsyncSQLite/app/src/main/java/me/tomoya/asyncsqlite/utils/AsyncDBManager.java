@@ -1,5 +1,7 @@
 package me.tomoya.asyncsqlite.utils;
 
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.util.Log;
 import me.tomoya.asyncsqlite.db.SampleDao;
 import me.tomoya.asyncsqlite.db.model.Sample;
@@ -26,7 +28,7 @@ public class AsyncDBManager {
         executorService.schedule(task, 200, TimeUnit.MILLISECONDS);
     }
 
-    public static void insert() {
+    public static void insert(final PackageManager packageManager) {
         final SampleDao dao = SampleDao.getInstance();
         addTaskQueue(new Runnable() {
             @Override
@@ -35,9 +37,15 @@ public class AsyncDBManager {
                 dao.insert(new Sample("sample_" + (seq + 1), seq + 1, Sample.STATUS.ON));
                 Log.v("", "Async Insert" + Thread.currentThread().getId());
 
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {}
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException e) {}
+                List<ApplicationInfo> applicationInfo = packageManager.getInstalledApplications(PackageManager.GET_META_DATA);
+                for (ApplicationInfo info : applicationInfo) {
+                    if ((info.flags & ApplicationInfo.FLAG_SYSTEM) == ApplicationInfo.FLAG_SYSTEM) continue;
+//                    if (info.packageName.equals(this.getPackageName())) continue;
+                    Log.v("", info.packageName);
+                }
             }
         });
     }
@@ -51,6 +59,10 @@ public class AsyncDBManager {
                 public void run() {
                     sample.delete();
                     Log.v("", "Async Delete" + Thread.currentThread().getId());
+
+                    if (sample.sequence == 3) {
+                        throw new RuntimeException();
+                    }
                 }
             });
         }
