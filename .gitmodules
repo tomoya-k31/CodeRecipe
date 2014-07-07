@@ -1,0 +1,3 @@
+[submodule "Java/webap/jaxrs-with-jetty-sample"]
+	path = Java/webap/jaxrs-with-jetty-sample
+	url = https://github.com/tomoya-k31/jaxrs-with-jetty-sample
