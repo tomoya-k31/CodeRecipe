@@ -1,0 +1,3 @@
+[submodule "Java/web"]
+	path = Java/web
+	url = https://github.com/tomoya-k31/jaxrs-with-jetty-sample
