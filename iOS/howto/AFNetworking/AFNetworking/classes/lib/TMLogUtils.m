@@ -47,8 +47,9 @@
 + (void)startAFNActivityLog
 {
     AFNetworkActivityLogger *logger = AFNetworkActivityLogger.sharedLogger;
-#ifdef DEBUG
+#if defined(DEBUG) || defined(BETA)
     [logger setLevel:AFLoggerLevelDebug];
+    NSLog(@"test");
 #else
     [logger setLevel:AFLoggerLevelOff];
 #endif

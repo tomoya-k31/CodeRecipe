@@ -8,6 +8,9 @@
 
 #import "TMViewController.h"
 
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
+
 @interface TMViewController ()
 
 @end
@@ -18,6 +21,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    CTTelephonyNetworkInfo *netinfo = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier *carrier = [netinfo subscriberCellularProvider];
+    NSLog(@"carrierName:%@",carrier.carrierName);
+    NSLog(@"carrierName: %@", carrier.carrierName);
+    NSLog(@"mobileCountryCode: %@", carrier.mobileCountryCode);
+    NSLog(@"mobileNetworkCode: %@", carrier.mobileNetworkCode);
+    NSLog(@"isoCountryCode: %@", carrier.isoCountryCode);
+    NSLog(@"allowsVOIP: %hhd", carrier.allowsVOIP);
 }
 
 - (void)didReceiveMemoryWarning

@@ -29,10 +29,10 @@
     if (self = [super init]) {
         if(TMGlobal.isIOS7){
             //7.x
-            self.proxy = TMHTTPSessionManager.new;
+//            self.proxy = TMHTTPSessionManager.new;
         }else{
             //6.x
-            self.proxy = TMHTTPRequestOperationManager.new;
+//            self.proxy = TMHTTPRequestOperationManager.new;
         }
     }
     return self;

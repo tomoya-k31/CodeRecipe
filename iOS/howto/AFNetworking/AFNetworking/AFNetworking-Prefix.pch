@@ -18,7 +18,7 @@
 
 
 // リリース時はログを表示しない
-#ifdef DEBUG
+#if defined(DEBUG) || defined(BETA)
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #else
 static const int ddLogLevel = LOG_LEVEL_ERROR;
