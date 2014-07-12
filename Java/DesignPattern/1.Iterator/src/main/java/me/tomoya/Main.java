@@ -3,6 +3,7 @@ package me.tomoya;
 import me.tomoya.object.Book;
 import me.tomoya.object.BookShelf;
 
+import java.util.Date;
 import java.util.Iterator;
 
 /**
@@ -23,5 +24,7 @@ public class Main {
             Book book = (Book)it.next();
             System.out.println(book.getName());
         }
+
+        System.out.println(new Date().getTime());
     }
 }
