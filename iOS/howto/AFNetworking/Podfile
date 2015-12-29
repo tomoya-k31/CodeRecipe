@@ -1,0 +1,8 @@
+platform :ios, '7.0'
+
+xcodeproj "AFNetworking.xcodeproj", {'Beta' => :debug}
+
+pod "AFNetworking", "~> 2"
+pod "AFNetworkActivityLogger", "~> 2"
+
+pod 'CocoaLumberjack'
